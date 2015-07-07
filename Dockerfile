@@ -33,7 +33,6 @@ RUN \
   git clone ${KIEKER_RECIPESRSS_GIT} ${KIEKER_RECIPESRSS_FOLDER} && \
   cd ${KIEKER_RECIPESRSS_FOLDER} && \
   ./gradlew -x check -x test clean build && \
-  echo ${TOMCAT_PORT_8080_TCP_ADDR} && \
   cp ${KIEKER_RECIPESRSS_FOLDER}/rss-middletier/build/libs/rss-middletier*SNAPSHOT.jar ${KIEKER_JAR_FOLDER}/${KIEKER_JAVA_JAR} && \
   rm ${KIEKER_RECIPESRSS_FOLDER} -r && \
   rm /root/.gradle -r
@@ -41,7 +40,6 @@ RUN \
 ENV KIEKER_VERSION 1.12-20150706.003609-88
 ENV KIEKER_AGENT_JAR_SRC kieker-${KIEKER_VERSION}-aspectj.jar
 ENV KIEKER_AGENT_BASE_URL "https://oss.sonatype.org/content/groups/staging/net/kieker-monitoring/kieker/1.12-SNAPSHOT"
-ENV TOMCAT_PORT_8080_TCP_ADDR localhost
  
 RUN \
   wget -q "${KIEKER_AGENT_BASE_URL}/${KIEKER_AGENT_JAR_SRC}" -O "${KIEKER_AGENT_FOLDER}/${KIEKER_AGENT_JAR}"
