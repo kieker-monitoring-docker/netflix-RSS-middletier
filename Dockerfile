@@ -37,8 +37,8 @@ RUN \
   cp ${KIEKER_RECIPESRSS_FOLDER}/rss-middletier/build/libs/rss-middletier*SNAPSHOT.jar ${KIEKER_JAR_FOLDER}/${KIEKER_JAVA_JAR} && \
   rm ${KIEKER_RECIPESRSS_FOLDER} -r && \
   rm /root/.gradle -r
-  
-ENV KIEKER_VERSION 1.13-20170424.023613-324
+
+ENV KIEKER_VERSION 1.13-20170518.023427-338 
 ENV KIEKER_AGENT_JAR_SRC kieker-${KIEKER_VERSION}-aspectj.jar
 ENV KIEKER_AGENT_BASE_URL "https://oss.sonatype.org/content/groups/staging/net/kieker-monitoring/kieker/1.13-SNAPSHOT"
  
